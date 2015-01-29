@@ -28,6 +28,7 @@ text-size-adjust:100%;
     width: 200px;
     left: calc(30% - 100px);
     position: absolute;
+    -webkit-animation: orbit 15s linear infinite alternate;
     animation: orbit 15s linear infinite alternate;
     top: 15%;
 }
