@@ -26,24 +26,39 @@ text-size-adjust:100%;
 .asteroid { 
     width: 200px;
     left: calc(30% - 100px);
-   position: absolute;
-    -webkit-animation: orbit 5s linear;
+    position: absolute;
+    animation: orbit 5s linear infinite;
 }
 
 .ship { 
     width: 150px;
     position: absolute;
     left: calc(50% - 20px);
-    top: -40px;
+    top: -50px;
+    animation: wiggel 5s linear infinite; 
 }
 
 body { 
     background-image: url("../images/stars.svg");
     background-color: black;
+    animation: background 5s linear infinite; 
     
 }
 
-@-webkit-keyframes orbit {
+@keyframes background{
+
+    0% { 
+        transform: scale(0%);
+        
+    }
+    
+    25% {
+        transform: scale(80%);
+        }
+}
+
+
+@keyframes orbit{
 
     from { 
         transform: rotate(0deg);
@@ -54,3 +69,35 @@ body {
         transform: rotate(360deg);
         }
 }
+
+@keyframes wiggel {
+
+    
+    0% { 
+        transform:translateY(0px)
+    }
+    
+    33% { 
+        transform: translateY(100px)
+    }
+    
+    
+    0% { 
+        transform:translateX(0px)
+    }
+    
+    75% { 
+        transform: translateX(100px)
+    }
+    
+    
+    from { 
+        transform: rotate(0deg);
+        
+    }
+    
+    to {
+        transform: rotate(360deg);
+        }
+}
+
