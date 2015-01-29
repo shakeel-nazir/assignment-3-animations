@@ -1,0 +1,56 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+-moz-text-size-adjust:100%;
+-ms-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+text-size-adjust:100%;
+  }
+  
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.plant-wrapper { 
+    margin: 8em 0;
+    position: relative;
+}
+
+.asteroid { 
+    width: 200px;
+    left: calc(30% - 100px);
+   position: absolute;
+    -webkit-animation: orbit 5s linear;
+}
+
+.ship { 
+    width: 150px;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: -40px;
+}
+
+body { 
+    background-image: url("../images/stars.svg");
+    background-color: black;
+    
+}
+
+@-webkit-keyframes orbit {
+
+    from { 
+        transform: rotate(0deg);
+        
+    }
+    
+    to {
+        transform: rotate(360deg);
+        }
+}
