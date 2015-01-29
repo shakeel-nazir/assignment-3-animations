@@ -29,7 +29,7 @@ text-size-adjust:100%;
     left: calc(30% - 100px);
     position: absolute;
     -webkit-animation: orbit 15s linear infinite alternate;
-    animation: orbit 15s linear infinite alternate;
+    animation: orbit 15s ease-in-out infinite alternate;
     top: 15%;
 }
 
@@ -39,14 +39,14 @@ text-size-adjust:100%;
     left: calc(50% - 20px);
     top: -50px;
     -webkit-animation: wiggel 6s linear infinite;
-    animation: wiggel 6s linear infinite; 
+    animation: wiggel 6s ease-in-out infinite; 
     top:15%
 }
 
 .stars { 
     background-image: url("../images/stars.svg");
     -webkit-animation: stars 80s linear alternate infinite; 
-    animation: stars 80s linear alternate infinite; 
+    animation: stars 80s ease-in-out alternate infinite; 
     height: 100vh;
 }
 
@@ -79,7 +79,7 @@ body {
 @-webkit-keyframes orbit{
 
     0% { 
-        -webkit-transform: rotate(0deg) ease-in;
+        -webkit-transform: rotate(0deg);
     }
     
     35% {
@@ -87,14 +87,14 @@ body {
     }
     
     100% { 
-        -webkit-transform: rotate(360deg)ease-out;
+        -webkit-transform: rotate(360deg);
     }
 }
 
 @keyframes orbit{
 
     0% { 
-        transform: rotate(0deg) ease-in;
+        transform: rotate(0deg);
     }
     
     35% {
@@ -102,14 +102,14 @@ body {
     }
     
     100% { 
-        transform: rotate(360deg)ease-out;
+        transform: rotate(360deg);
     }
 }
 
 @-webkit-keyframes wiggel {
 
     0% { 
-        -webkit-transform:translateY(0px)ease-in;
+        -webkit-transform:translateY(0px);
     }
     
     33% { 
@@ -126,14 +126,14 @@ body {
     }
 
     100% {
-        -webkit-transform: rotate(360deg) ease-in;
+        -webkit-transform: rotate(360deg);
     }
 }
 
 @keyframes wiggel {
 
     0% { 
-        transform:translateY(0px)ease-in;
+        transform:translateY(0px);
     }
     
     33% { 
@@ -150,7 +150,7 @@ body {
     }
 
     100% {
-        transform: rotate(360deg) ease-in;
+        transform: rotate(360deg);
         }
 }
 
