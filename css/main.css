@@ -43,7 +43,7 @@ text-size-adjust:100%;
 
 .stars { 
     background-image: url("../images/stars.svg");
-    animation: stars 15s linear infinite alternate; 
+    animation: stars 80s linear alternate; 
     height: 100vh;
 }
 
@@ -55,30 +55,26 @@ body {
 
     0% { 
         transform: scale(1,1);
-        
     }
     
-    100% {
+    50% {
         transform: scale(2,2);
-        }
+    }
 }
-
 
 @keyframes orbit{
 
     from { 
         transform: rotate(0deg);
-        
     }
     
     to {
         transform: rotate(360deg);
-        }
+    }
 }
 
 @keyframes wiggel {
 
-    
     0% { 
         transform:translateY(0px)
     }
@@ -96,7 +92,6 @@ body {
         transform: translateX(100px)
     }
 
-    
     100% {
         transform: rotate(360deg);
         }
