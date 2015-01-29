@@ -28,7 +28,7 @@ text-size-adjust:100%;
     width: 200px;
     left: calc(30% - 100px);
     position: absolute;
-    animation: orbit 5s linear infinite alternate;
+    animation: orbit 15s linear infinite alternate;
     top: 15%;
 }
 
@@ -37,13 +37,13 @@ text-size-adjust:100%;
     position: absolute;
     left: calc(50% - 20px);
     top: -50px;
-    animation: wiggel 5s linear infinite; 
+    animation: wiggel 6s linear infinite; 
     top:15%
 }
 
 .stars { 
     background-image: url("../images/stars.svg");
-    animation: stars 80s linear alternate; 
+    animation: stars 80s linear alternate infinite; 
     height: 100vh;
 }
 
@@ -64,11 +64,15 @@ body {
 
 @keyframes orbit{
 
-    from { 
+    0% { 
         transform: rotate(0deg);
     }
     
-    to {
+    35% {
+        transform: rotate(-90deg);
+    }
+    
+    100% { 
         transform: rotate(360deg);
     }
 }
